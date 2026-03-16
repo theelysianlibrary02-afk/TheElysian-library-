@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,50 @@
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family: "Segoe UI", sans-serif;
-background:#0b1f3a; /* deep premium blue */
-color:white;
 }
 
-/* HEADER */
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
 
-header{
-background:#08162b;
-padding:20px 10%;
+/* NAVBAR */
+
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 10%;
+background:#020617;
 }
 
-header h1{
-color:#d4af37; /* gold */
-margin:0;
-font-size:22px;
-letter-spacing:1px;
+nav h1{
+font-size:24px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
-font-weight:500;
+font-size:15px;
 }
 
 nav a:hover{
-color:#d4af37;
+color:#38bdf8;
 }
 
-/* HERO */
+/* HERO WITH IMAGE */
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(8,22,43,0.7),rgba(8,22,43,0.7)),
+height:85vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url('images/library.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -57,42 +62,27 @@ padding:20px;
 }
 
 .hero h2{
-font-size:48px;
-color:#d4af37;
+font-size:50px;
 margin-bottom:15px;
+color:#38bdf8;
 }
 
 .hero p{
 max-width:600px;
-opacity:0.9;
-}
-
-.button{
-background:#d4af37;
-color:#08162b;
-padding:12px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-margin-top:20px;
-transition:0.3s;
-}
-
-.button:hover{
-background:white;
+opacity:.9;
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 10%;
+padding:70px 10%;
 }
 
 .section-title{
+font-size:32px;
+margin-bottom:30px;
 text-align:center;
-font-size:30px;
-color:#d4af37;
-margin-bottom:40px;
+color:#38bdf8;
 }
 
 /* CARDS */
@@ -100,20 +90,18 @@ margin-bottom:40px;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
-background:#102a4d;
+background:#1e293b;
 padding:25px;
-border-radius:12px;
-border:1px solid #1e3a5f;
+border-radius:10px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-border-color:#d4af37;
+transform:translateY(-5px);
 }
 
 /* GALLERY */
@@ -122,6 +110,7 @@ border-color:#d4af37;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
+margin-top:30px;
 }
 
 .gallery img{
@@ -138,8 +127,18 @@ transform:scale(1.05);
 
 /* LOCATION */
 
-iframe{
-border-radius:12px;
+.location{
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+padding:20px;
+text-align:center;
+margin-top:40px;
+opacity:.7;
 }
 
 /* WHATSAPP BUTTON */
@@ -150,19 +149,11 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:14px 20px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-}
-
-/* FOOTER */
-
-footer{
-background:#08162b;
-text-align:center;
-padding:20px;
-color:#aaa;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
 </style>
@@ -170,79 +161,112 @@ color:#aaa;
 
 <body>
 
-<header>
-<h1>The Elysian Library</h1>
 <nav>
+<h1>The Elysian Library</h1>
+
+<div>
 <a href="#about">About</a>
 <a href="#facilities">Facilities</a>
 <a href="#gallery">Gallery</a>
 <a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
-</header>
+
 
 <div class="hero">
-<h2>Premium Study Space for Female Students</h2>
+
+<h2>Peaceful Study Space for Female Students</h2>
+
 <p>
-A peaceful, secure, and modern environment for university,
-college, and medical entrance students in Quetta.
+A peaceful, secure and modern environment for university,
+college and medical entrance students in Quetta.
 </p>
-<a href="#location" class="button">Find Us</a>
+
 </div>
 
+
 <section id="about">
+
 <h2 class="section-title">About The Elysian Library</h2>
-<p style="text-align:center;max-width:800px;margin:auto;">
-The Elysian Library is an exclusive female-only study space designed
-to provide focus, comfort, and academic excellence. With limited seating
-and premium facilities, it ensures a distraction-free environment.
+
+<p style="max-width:800px;margin:auto;text-align:center;opacity:.9;">
+The Elysian Library provides a focused and distraction-free
+study environment exclusively for female students.
+With limited seating capacity, it ensures silence,
+comfort and academic excellence.
 </p>
+
 </section>
 
+
 <section id="facilities">
+
 <h2 class="section-title">Facilities</h2>
 
 <div class="grid">
 
 <div class="card">✔ Quiet Study Environment</div>
 <div class="card">✔ Comfortable Study Carrels</div>
-<div class="card">✔ High-Speed WiFi</div>
+<div class="card">✔ High Speed Wi-Fi</div>
 <div class="card">✔ UPS Power Backup</div>
-<div class="card">✔ Dedicated Prayer Area</div>
+<div class="card">✔ Prayer Area</div>
 <div class="card">✔ Rooftop Terrace</div>
 
 </div>
+
 </section>
 
+
 <section id="gallery">
-<h2 class="section-title">Gallery</h2>
+
+<h2 class="section-title">Premium Gallery</h2>
 
 <div class="gallery">
 <img src="images/library.jpg">
-<img src="images/studyroom.jpg">
-<img src="images/desks.jpg">
+<img src="images/study1.jpg">
+<img src="images/study2.jpg">
 <img src="images/terrace.jpg">
 </div>
-</section>
-
-<section id="location">
-<h2 class="section-title">Our Location</h2>
-
-<iframe
-src="https://maps.apple.com/place?address=Hazara%20Town%20Road,%20Hazara%20Town,%20Pakistan&coordinate=30.186831,66.962273&name=The%20Elysian%20Library&map=explore"
-width="100%"
-height="350"
-style="border:0;"
-loading="lazy">
-</iframe>
 
 </section>
+
+
+<section id="location" class="location">
+
+<h2 class="section-title">Location</h2>
+
+<p>
+Railway Cooperative Housing Society<br>
+Hazara Town Road Brewery<br>
+Quetta, Pakistan
+</p>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>Phone / WhatsApp:</p>
+<p><strong>+92 326 3488608</strong></p>
+
+<p>Email:</p>
+<p>elysianlibrary02@email.com</p>
+
+</section>
+
 
 <footer>
-© 2026 The Elysian Library | Premium Study Environment
+© 2026 The Elysian Library
 </footer>
 
+
+<!-- WHATSAPP BUTTON -->
+
 <a href="https://wa.me/923263488608" class="whatsapp">
-Contact on WhatsApp
+Chat on WhatsApp
 </a>
 
 </body>
