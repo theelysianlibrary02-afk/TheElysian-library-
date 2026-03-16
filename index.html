@@ -1,50 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
 <title>The Elysian Library</title>
 
 <style>
 
-body{
-font-family: Georgia, serif;
+*{
 margin:0;
-background:#0f172a;
-color:white;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
 }
 
-header{
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
 background:#020617;
-padding:30px;
+}
+
+nav h1{
+font-size:24px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:600px;
+opacity:.8;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
 text-align:center;
 }
 
-h1{
-font-size:40px;
-margin:0;
-}
+/* CARDS */
 
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:#1e293b;
 padding:25px;
-margin:20px 0;
 border-radius:10px;
+transition:0.3s;
 }
 
-ul{
-line-height:1.8;
+.card:hover{
+transform:translateY(-5px);
 }
+
+/* LOCATION */
+
+.location{
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin-top:10px;
+}
+
+/* FOOTER */
 
 footer{
-text-align:center;
-padding:20px;
 background:#020617;
+padding:20px;
+text-align:center;
 margin-top:40px;
+opacity:.7;
 }
 
 </style>
@@ -52,51 +125,89 @@ margin-top:40px;
 
 <body>
 
-<header>
+<nav>
 <h1>The Elysian Library</h1>
-<p>Peaceful Study Space for Female Students</p>
-</header>
 
-<section>
+<div>
+<a href="#about">About</a>
+<a href="#facilities">Facilities</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<div class="card">
-<h2>About The Elysian Library</h2>
+
+<div class="hero">
+
+<h2>A Peaceful Study Space for Female Students</h2>
 
 <p>
-The Elysian Library is a dedicated study space exclusively for female students.
-It provides a calm, peaceful, and secure environment for university, college,
-and medical entrance exam students who want to focus on their studies without
-distractions.
-</p>
-
-<p>
-Located near major educational institutions in Quetta, the library is designed
-to support serious students seeking a quiet and comfortable place to learn.
+The Elysian Library is a calm and secure study environment designed
+exclusively for female university, college, and medical entrance exam
+students in Quetta.
 </p>
 
 </div>
 
+
+<section id="about">
+
+<h2 class="section-title">About The Elysian Library</h2>
+
+<p style="max-width:800px;margin:auto;text-align:center;opacity:.9;">
+Located near Hazara Town Road Brewery in Quetta, The Elysian Library
+provides a quiet and focused atmosphere for serious students. With
+limited seating to maintain silence and concentration, it is designed
+to support academic success in a peaceful environment.
+</p>
+
+</section>
+
+
+<section id="facilities">
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="grid">
+
 <div class="card">
-
-<h2>Facilities</h2>
-
-<ul>
-<li>Peaceful and secure study environment</li>
-<li>Seating capacity for 25 students</li>
-<li>Comfortable study carrels</li>
-<li>Individual lighting and power switches</li>
-<li>High-speed complimentary Wi-Fi</li>
-<li>UPS electricity backup</li>
-<li>Dedicated prayer area</li>
-<li>Rooftop terrace for open-air breaks</li>
-
-</ul>
-
+<h3>Quiet Study Environment</h3>
+<p>Calm and distraction-free atmosphere for focused learning.</p>
 </div>
 
 <div class="card">
+<h3>Comfortable Study Carrels</h3>
+<p>Individual desks with dedicated lighting and power switches.</p>
+</div>
 
-<h2>Location</h2>
+<div class="card">
+<h3>High Speed Wi-Fi</h3>
+<p>Reliable internet connection for research and online learning.</p>
+</div>
+
+<div class="card">
+<h3>UPS Power Backup</h3>
+<p>Continuous electricity to ensure uninterrupted study sessions.</p>
+</div>
+
+<div class="card">
+<h3>Prayer Area</h3>
+<p>A dedicated quiet space for prayer and reflection.</p>
+</div>
+
+<div class="card">
+<h3>Rooftop Terrace</h3>
+<p>Open air space where students can relax during study breaks.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="location" class="location">
+
+<h2 class="section-title">Location</h2>
 
 <p>
 Railway Cooperative Housing Society<br>
@@ -104,14 +215,26 @@ Hazara Town Road Brewery<br>
 Quetta, Pakistan
 </p>
 
-<p>
-Nearby institutions include Bolan Medical College, Bolan University of Health Sciences,
+<p style="margin-top:10px;opacity:.8;">
+Near Bolan Medical College, Bolan University of Health Sciences,
 SBK University, Hazara Town, Faisal Town and A-One City.
 </p>
 
-</div>
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>For seat availability and registration inquiries:</p>
+
+<p>📞 Phone / WhatsApp: Add your number here</p>
+
+<p>📧 Email: elysianlibrary@email.com</p>
 
 </section>
+
 
 <footer>
 
@@ -120,4 +243,5 @@ SBK University, Hazara Town, Faisal Town and A-One City.
 </footer>
 
 </body>
+
 </html>
