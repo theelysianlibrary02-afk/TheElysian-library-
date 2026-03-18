@@ -3,7 +3,12 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Elysian Library</title>
+
+<!-- SEO -->
+<meta name="description" content="The Elysian Library is a peaceful female-only study space in Quetta near Hazara Town offering quiet environment, WiFi, and secure study area.">
+<meta name="keywords" content="library in Quetta, girls study space Quetta, female library Quetta, quiet study place Quetta">
 
 <style>
 
@@ -41,10 +46,13 @@ margin-left:20px;
 font-size:15px;
 }
 
-/* HERO */
+/* HERO WITH IMAGE */
 
 .hero{
-height:80vh;
+height:85vh;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('images/library.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -60,7 +68,7 @@ margin-bottom:15px;
 
 .hero p{
 max-width:600px;
-opacity:.8;
+opacity:.9;
 }
 
 /* SECTIONS */
@@ -94,6 +102,27 @@ transition:0.3s;
 transform:translateY(-5px);
 }
 
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
 /* LOCATION */
 
 .location{
@@ -120,6 +149,26 @@ margin-top:40px;
 opacity:.7;
 }
 
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
 </style>
 </head>
 
@@ -131,6 +180,7 @@ opacity:.7;
 <div>
 <a href="#about">About</a>
 <a href="#facilities">Facilities</a>
+<a href="#gallery">Gallery</a>
 <a href="#location">Location</a>
 <a href="#contact">Contact</a>
 </div>
@@ -147,6 +197,10 @@ exclusively for female university, college, and medical entrance exam
 students in Quetta.
 </p>
 
+<p style="margin-top:15px;opacity:.7;">
+Limited Seats • Quiet Environment • Female Only
+</p>
+
 </div>
 
 
@@ -156,9 +210,7 @@ students in Quetta.
 
 <p style="max-width:800px;margin:auto;text-align:center;opacity:.9;">
 Located near Hazara Town Road Brewery in Quetta, The Elysian Library
-provides a quiet and focused atmosphere for serious students. With
-limited seating to maintain silence and concentration, it is designed
-to support academic success in a peaceful environment.
+provides a quiet and focused atmosphere for serious students.
 </p>
 
 </section>
@@ -170,55 +222,66 @@ to support academic success in a peaceful environment.
 
 <div class="grid">
 
-<div class="card">
-<h3>Quiet Study Environment</h3>
-<p>Calm and distraction-free atmosphere for focused learning.</p>
-</div>
-
-<div class="card">
-<h3>Comfortable Study Carrels</h3>
-<p>Individual desks with dedicated lighting and power switches.</p>
-</div>
-
-<div class="card">
-<h3>High Speed Wi-Fi</h3>
-<p>Reliable internet connection for research and online learning.</p>
-</div>
-
-<div class="card">
-<h3>UPS Power Backup</h3>
-<p>Continuous electricity to ensure uninterrupted study sessions.</p>
-</div>
-
-<div class="card">
-<h3>Prayer Area</h3>
-<p>A dedicated quiet space for prayer and reflection.</p>
-</div>
-
-<div class="card">
-<h3>Rooftop Terrace</h3>
-<p>Open air space where students can relax during study breaks.</p>
-</div>
+<div class="card">Quiet Study Environment</div>
+<div class="card">Comfortable Study Carrels</div>
+<div class="card">High Speed Wi-Fi</div>
+<div class="card">UPS Power Backup</div>
+<div class="card">Prayer Area</div>
+<div class="card">Rooftop Terrace</div>
 
 </div>
 
 </section>
 
 
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+<img src="images/library.jpg">
+<img src="images/study1.jpg">
+<img src="images/study2.jpg">
+<img src="images/terrace.jpg">
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
 <section id="location" class="location">
 
 <h2 class="section-title">Location</h2>
 
-<p>
-Railway Cooperative Housing Society<br>
-Hazara Town Road Brewery<br>
-Quetta, Pakistan
-</p>
+<iframe
+src="https://www.google.com/maps?q=Hazara+Town+Quetta&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:10px;"
+loading="lazy">
+</iframe>
 
-<p style="margin-top:10px;opacity:.8;">
-Near Bolan Medical College, Bolan University of Health Sciences,
-SBK University, Hazara Town, Faisal Town and A-One City.
-</p>
+</section>
+
+
+<!-- REVIEWS -->
+
+<section>
+
+<h2 class="section-title">Student Reviews</h2>
+
+<div class="card">
+<p>"Best place in Quetta for peaceful study."</p>
+<strong>— Medical Student</strong>
+</div>
+
+<div class="card">
+<p>"Very calm and comfortable environment."</p>
+<strong>— University Student</strong>
+</div>
 
 </section>
 
@@ -227,9 +290,7 @@ SBK University, Hazara Town, Faisal Town and A-One City.
 
 <h2 class="section-title">Contact</h2>
 
-<p>For seat availability and registration inquiries:</p>
-
-<p>📞 Phone / WhatsApp: +92326-3488608</p>
+<p>📞 Phone / WhatsApp: +92 326 3488608</p>
 
 <p>📧 Email: elysianlibrary02@email.com</p>
 
@@ -241,6 +302,13 @@ SBK University, Hazara Town, Faisal Town and A-One City.
 <p>© 2026 The Elysian Library</p>
 
 </footer>
+
+
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/923263488608" class="whatsapp" target="_blank">
+💬 WhatsApp Us
+</a>
 
 </body>
 
